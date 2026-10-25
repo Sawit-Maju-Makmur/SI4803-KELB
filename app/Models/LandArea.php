@@ -14,4 +14,14 @@ class LandArea extends Model
         'name',
         'polygon_coordinates',
     ];
+
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'polygon_coordinates' => 'array',
+        ];
+    }
 }
